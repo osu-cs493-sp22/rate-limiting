@@ -16,7 +16,13 @@ async function rateLimit(req, res, next) {
   const ip = req.ip
   // const tokenBucket = await getUserTokenBucket(ip)
 
-  let tokenBucket = await redisClient.hGetAll(ip)
+  let tokenBucket
+  try {
+    tokenBucket = await redisClient.hGetAll('123.45.67.89')
+  } catch (e) {
+    next()
+    return
+  }
   console.log("== tokenBucket:", tokenBucket)
   tokenBucket = {
     tokens: parseFloat(tokenBucket.tokens) || rateLimitMaxRequests,
