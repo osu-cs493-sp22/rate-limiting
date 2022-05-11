@@ -1,0 +1,32 @@
+{
+  "name": "rate-limiting",
+  "version": "1.0.0",
+  "description": "Dummy API with IP-based rate limiting",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs493-sp22/rate-limiting.git"
+  },
+  "keywords": [
+    "Rate",
+    "limiting",
+    "API"
+  ],
+  "author": "Hess <hessro@oregonstate.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osu-cs493-sp22/rate-limiting/issues"
+  },
+  "homepage": "https://github.com/osu-cs493-sp22/rate-limiting#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
